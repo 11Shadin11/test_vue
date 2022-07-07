@@ -1,23 +1,20 @@
 <template lang="pug">
-<div class="qw" style="background:url(https://bittrading.club/img/background-index4.png)">
-<HomeView/>
- <Home/>
+<div >
+  <div>
+    <Menu></Menu>
+  </div>
 </div>
-
 </template>
 
 <script>
-import HomeView from './views/HomeView.vue'
-import Home from './views/Home.vue'
+import Menu from './views/HomeView.vue'
+import Cont from './views/Home.vue'
+import About from './views/About.vue'
 export default {
   name: "App",
-  components: {HomeView, Home},
+  components: {Menu, Cont,About},
 };
 </script>
 
 <style scoped>
-.qw{
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 </style>

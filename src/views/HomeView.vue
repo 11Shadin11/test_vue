@@ -1,60 +1,61 @@
 <template>
-  <div >
-    <div class="menu-bar">
-      <ul class="ul">
-        <li>SIGN IN</li>
-        <li>REGISTER</li>
-        <li>TRADING</li>
-        <li>ABOUT US</li>
-      </ul>
-    </div>
-    <!-- <HelloWorld /> -->
+  <div>
+    <v-app
+      style="
+        background: url(https://bittrading.club/img/background-index4.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: 210%;
+        object-fit: cover;
+      "
+    >
+      <v-toolbar-items>
+        <FirstHeaderButton></FirstHeaderButton>
+      </v-toolbar-items>
+      <div class="qwerty" style="width: 840px; height: 283px">
+        <div
+          style="
+            font-size: 62px/60px;
+            color: white;
+            text-align: center;
+            float: right;
+            align-content: space-between;
+          "
+        >
+          <h1>BIT TRADING</h1>
+          <h2>SECURE, CONVINIENT AND FAST</h2>
+          <h2>WAY OF EARNING AND TRADING CRYPTO</h2>
+        </div>
+        <div class="ico"></div>
+      </div>
+    </v-app>
   </div>
 </template>
 
 <script>
-  // import HelloWorld from '../components/HelloWorld'
+import FirstHeaderButton from "../views/FirstHeaderButton.vue";
+export default {
+  name: "Menu",
 
-  export default {
-    name: 'HomeView',
+  components: { FirstHeaderButton },
 
-    components: {
-      // HelloWorld,
-    },
-
-    data()  {
-
-    },
-  }
+  data() {},
+};
 </script>
 <style scoped>
-*{
-  margin: 0;
-  padding: 0;
+.ico {
+  background: url(https://bittrading.club/img/sprite-index.svg);
+  background-size: 295%;
+  background-position: 88.1% 107.5%;
+  width: 283px;
+  height: 283px;
+  float: left;
+  min-width: 10px;
 }
-.menu-bar {
-  width: 960;
+.qwerty {
   margin: 0 auto;
- }
- .menu-bar::before{
-  content: '';
-  display: block;
-  height: 100px;
-  width: 100%;
-  background: coral;
-  position: absolute;
-  left: 0;
-  z-index: -1;
- }
- ul{
-  list-style: none;
-  height: 50px;
-  position: absolute;
- }
- ul li{
-  float: right;
-  color: white;
-  padding: 0 30px;
- text-align: center;
- }
+  width: 840px;
+  text-align: center;
+  overflow: hidden;
+}
 </style>
