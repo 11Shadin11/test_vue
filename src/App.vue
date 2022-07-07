@@ -1,32 +1,23 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<template lang="pug">
+<div class="qw" style="background:url(https://bittrading.club/img/background-index4.png)">
+<HomeView/>
+ <Home/>
+</div>
+
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import HomeView from './views/HomeView.vue'
+import Home from './views/Home.vue'
+export default {
+  name: "App",
+  components: {HomeView, Home},
+};
+</script>
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+<style scoped>
+.qw{
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 </style>
