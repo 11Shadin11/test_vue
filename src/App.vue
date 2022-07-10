@@ -1,5 +1,5 @@
 <template lang="pug">
-<div >
+<div class="title">
   <div>
     <Menu></Menu>
   </div>

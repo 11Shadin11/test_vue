@@ -17,9 +17,8 @@
           style="
             font-size: 62px/60px;
             color: white;
-            text-align: center;
+            text-align: left;
             float: right;
-            align-content: space-between;
           "
         >
           <h1>BIT TRADING</h1>
