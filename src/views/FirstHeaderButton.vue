@@ -1,20 +1,20 @@
 <template >
   <div
-    class="btn"
     style="
       margin: 0 auto;
-      width: 1200px;
+      width: 1100px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      padding: 20px;
-      align-content: space-between;
+      padding: 18px 26px 10px 34px;
+      text-align: right;
     "
   >
     <v-row>
       <v-dialog
         v-model="dialog"
-        persistent
+        persistent:true
         max-width="598px"
         transition="dialog-top-transition"
+        overlay-color = "#fff"
       >
         <template v-slot:activator="{ on, attrs }">
           <v-btn
@@ -27,49 +27,113 @@
               border-radius: 3px;
               width: 70px;
               min-height: 32px;
-              font: 13px/20px 'uni_sans_semiboldregular', Arial, Helvetica,
-                sans-serif;
-              display: inline-block;
-              vertical-align: middle;
-              letter-spacing: 0;
-              padding: 6px;
-              margin-left: 650px;
+              margin-top: 10px;
             "
             >SIGN IN</v-btn
           >
         </template>
         <v-card>
+          <br />
+          <br />
           <v-card-title>
-            <span >Login</span>
+            <h2
+              style="
+                margin:auto; padding:auto;
+                font-size: 30px;
+                font-weight: 500;
+                color: #333333;
+              "
+            >
+              Login
+            </h2>
           </v-card-title>
           <v-card-text>
             <v-container>
               <v-row>
+                <span style="color: black">
+                  Please fill in your credentials to login.
+                </span>
                 <v-col cols="12">
-                  <v-text-field
-                    label="Login or Email*"
-                    required
-                    class="mb-2"
-                  ></v-text-field>
+                  <label
+                    style="
+                      font-size: 14px;
+                      font-weight: 700;
+                      color: #333;
+                      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                      margin-bottom: 50px;
+                    "
+                    >Login or email</label
+                  >
+                  <input
+                    height="50px"
+                    outlined
+                    v-model="passE"
+                    style="
+                      display: block;
+                      width: 100%;
+                      height: 34px;
+                      padding: 6px 12px;
+                      font-size: 14px;
+                      line-height: 1.42857143;
+                      color: #555;
+                      background-color: #fff;
+                      background-image: none;
+                      border: 1px solid #ccc;
+                      border-radius: 4px;
+                      box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+                      transition: border-color ease-in-out 0.15s,
+                        box-shadow ease-in-out 0.15s,
+                        -webkit-box-shadow ease-in-out 0.15s;
+                    "
+                  />
                 </v-col>
                 <v-col cols="12">
-                  <v-text-field
-                    label="Password*"
+                  <label
+                    style="
+                      font-size: 14px;
+                      font-weight: 700;
+                      color: #333;
+                      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                      margin-bottom: 50px;
+                    "
+                    >Password</label
+                  >
+                  <input
+                    outlined
                     type="password"
                     v-model="pass"
-                    :error-messages="error"
-                  ></v-text-field>
+                    style="
+                      display: block;
+                      width: 100%;
+                      height: 34px;
+                      padding: 6px 12px;
+                      font-size: 14px;
+                      line-height: 1.42857143;
+                      color: #555;
+                      background-color: #fff;
+                      background-image: none;
+                      border: 1px solid #ccc;
+                      border-radius: 4px;
+                      box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+                      transition: border-color ease-in-out 0.15s,
+                        box-shadow ease-in-out 0.15s,
+                        -webkit-box-shadow ease-in-out 0.15s;
+                    "
+                  />
                 </v-col>
               </v-row>
             </v-container>
           </v-card-text>
-          <v-card-actions>
-            <v-spacer></v-spacer>
+          <v-card-actions style="margin-top:-30px">
             <v-btn color="primary" text @click="checkinf"> Login </v-btn>
             <v-btn color="primary" dark text @click="dialog = false">
               Close
             </v-btn>
+            <div style="color: red">
+              {{ error }}
+            </div>
           </v-card-actions>
+
         </v-card>
       </v-dialog>
     </v-row>
@@ -122,24 +186,27 @@ export default {
 
   data() {
     return {
-      dialog: true,
-      error:null,
+      dialog: false,
+      error: null,
     };
   },
   methods: {
     checkinf() {
       console.log(this.pass);
-      if (this.pass == "123") {
-        this.error=""
+      if (this.pass == "123" && this.passE == "112233") {
+        this.error = "";
         return false;
       } else {
-        this.error="ERROR"
+        this.error = "Incorrect username or password.";
         return true;
-        
       }
-    }
+    },
   },
 };
 </script>
 <style scoped>
+.btnqw:hover {
+  background: #59d0ff;
+  border: #59d0ff;
+}
 </style>

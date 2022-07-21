@@ -3,9 +3,13 @@
     <v-app
       style="
         background: url(https://bittrading.club/img/background-index4.png);
+        background-clip: border-box;
         background-repeat: no-repeat;
         background-position: top;
-        background-size: 210%;
+        background-size: 230%;
+        min-height: 400px;
+        overflow: hidden;
+        position: relative;
         object-fit: cover;
       "
     >
@@ -21,7 +25,7 @@
             float: right;
           "
         >
-          <h1>BIT TRADING</h1>
+          <h1 class="qwe">BIT TRADING</h1>
           <h2>SECURE, CONVINIENT AND FAST</h2>
           <h2>WAY OF EARNING AND TRADING CRYPTO</h2>
         </div>
@@ -56,5 +60,8 @@ export default {
   width: 840px;
   text-align: center;
   overflow: hidden;
+}
+.qwe{
+  font-size: 60px;
 }
 </style>
