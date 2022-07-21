@@ -16,17 +16,10 @@
       <v-toolbar-items>
         <FirstHeaderButton></FirstHeaderButton>
       </v-toolbar-items>
-      <div class="qwerty" style="width: 840px; height: 283px">
-        <div
-          style="
-            font-size: 62px/60px;
-            color: white;
-            text-align: left;
-            float: right;
-          "
-        >
-          <h1 class="qwe">BIT TRADING</h1>
-          <h2>SECURE, CONVINIENT AND FAST</h2>
+      <div class="qwerty">
+        <div class="homeText">
+          <h1 class="h1">BIT TRADING</h1>
+          <h2 >SECURE, CONVINIENT AND FAST</h2>
           <h2>WAY OF EARNING AND TRADING CRYPTO</h2>
         </div>
         <div class="ico"></div>
@@ -49,11 +42,11 @@ export default {
 .ico {
   background: url(https://bittrading.club/img/sprite-index.svg);
   background-size: 295%;
-  background-position: 88.1% 107.5%;
+  background-position: 87.1% 107.5%;
   width: 283px;
   height: 283px;
   float: left;
-  min-width: 10px;
+  margin: 10px 0 0 -15px;
 }
 .qwerty {
   margin: 0 auto;
@@ -61,7 +54,17 @@ export default {
   text-align: center;
   overflow: hidden;
 }
-.qwe{
+.homeText {
+  color: white;
+  text-align: left;
+  float: right;
+  margin-top: 70px;
+  margin-left: -160px;
+}
+.h1 {
   font-size: 60px;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
 }
 </style>
