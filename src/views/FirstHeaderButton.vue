@@ -9,14 +9,15 @@
     "
   >
     <v-dialog
+      class="dialog"
       v-model="dialog"
-      persistent:true
       max-width="598px"
-      transition="dialog-top-transition"
+      transition="scroll-y-transition"
       overlay-color="#fff"
     >
       <template v-slot:activator="{ on, attrs }">
         <v-btn
+        class="btnqw"
           outlined
           v-bind="attrs"
           v-on="on"
@@ -48,7 +49,7 @@
           </h2>
         </v-card-title>
         <v-card-text>
-          <v-container>
+          <v-container style="float: right">
             <v-row>
               <span style="color: black">
                 Please fill in your credentials to login.
@@ -133,14 +134,14 @@
             {{ error }}
           </div>
         </v-card-actions>
-        <div>
-          <p>Don't have an account? Sign up now.</p>
-          <p>Forgot Password or Two-Factor Device? Request Password Reset.</p>
-        </div>
+        
+          <span >Don't have an account?</span>  <a href = "#1"> Sign up now.</a> <br>
+          <span>Forgot Password or Two-Factor Device?</span>  <a href = "#1"> Request Password Reset.</a> 
       </v-card>
     </v-dialog>
     <v-btn
       depressed
+      class="btnqwe"
       style="
         margin: 5px;
         background: white;
@@ -155,6 +156,7 @@
     >
     <v-btn
       depressed
+      class="btnqwr"
       style="
         margin: 5px;
         background: transparent;
@@ -168,6 +170,7 @@
       >TRADING</v-btn
     >
     <v-btn
+    class="btnqwt"
       style="
         margin: 5px;
         background: transparent;
@@ -207,8 +210,9 @@ export default {
 };
 </script>
 <style scoped>
-.btnqw:hover {
-  background: #59d0ff;
-  border: #59d0ff;
+.dialog{
+  position: absolute !important;
+  top: -500px !important;
+  color: red !important;
 }
 </style>

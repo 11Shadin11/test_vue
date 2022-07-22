@@ -3,14 +3,10 @@
     <v-app
       style="
         background: url(https://bittrading.club/img/background-index4.png);
-        background-clip: border-box;
         background-repeat: no-repeat;
         background-position: top;
         background-size: 230%;
         min-height: 400px;
-        overflow: hidden;
-        position: relative;
-        object-fit: cover;
       "
     >
       <v-toolbar-items>
