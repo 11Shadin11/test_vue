@@ -25,8 +25,8 @@
             color: #fff;
             border: 1px solid white;
             border-radius: 3px;
-            width: 70px;
-            min-height: 32px;
+            width: 68.64px;
+            height: 32px !important;
             margin: 5px;
           "
           >SIGN IN</v-btn
@@ -103,6 +103,7 @@
                   outlined
                   type="password"
                   v-model="pass"
+                  color = "red"
                   style="
                     display: block;
                     width: 100%;
