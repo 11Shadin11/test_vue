@@ -8,32 +8,11 @@
       text-align: right;
     "
   >
-    <v-dialog
-      class="dialog"
-      v-model="dialog"
-      max-width="598px"
-      transition="scroll-y-transition"
-      overlay-color="#fff"
-    >
+    <v-dialog v-model="dialog" max-width="598px" overlay-color="#fff">
       <template v-slot:activator="{ on, attrs }">
-        <v-btn
-        class="btnqw"
-          outlined
-          v-bind="attrs"
-          v-on="on"
-          style="
-            color: #fff;
-            border: 1px solid white;
-            border-radius: 3px;
-            width: 68.64px;
-            height: 32px !important;
-            margin: 5px;
-          "
-          >SIGN IN</v-btn
-        >
+        <v-btn class="all" outlined v-bind="attrs" v-on="on">SIGN IN</v-btn>
       </template>
       <v-card>
-        <br />
         <br />
         <v-card-title>
           <h2
@@ -103,7 +82,7 @@
                   outlined
                   type="password"
                   v-model="pass"
-                  color = "red"
+                  color="red"
                   style="
                     display: block;
                     width: 100%;
@@ -135,55 +114,19 @@
             {{ error }}
           </div>
         </v-card-actions>
-        
-          <span >Don't have an account?</span>  <a href = "#1"> Sign up now.</a> <br>
-          <span>Forgot Password or Two-Factor Device?</span>  <a href = "#1"> Request Password Reset.</a> 
+
+        <li class="qw">
+          Don't have an account? <a href="#1"> Sign up now.</a>
+        </li>
+        <li class="qw">
+          Forgot Password or Two-Factor Device?
+          <a href="#1"> Request Password Reset.</a>
+        </li>
       </v-card>
     </v-dialog>
-    <v-btn
-      depressed
-      class="btnqwe"
-      style="
-        margin: 5px;
-        background: white;
-        color: #093152;
-        border: 1px solid white;
-        border-radius: 3px;
-        width: 70px;
-        min-height: 32px;
-        font-size: 13px;
-      "
-      >REGISTER</v-btn
-    >
-    <v-btn
-      depressed
-      class="btnqwr"
-      style="
-        margin: 5px;
-        background: transparent;
-        color: white;
-        border: 1px solid white;
-        border-radius: 3px;
-        width: 70px;
-        min-height: 32px;
-        font-size: 13px;
-      "
-      >TRADING</v-btn
-    >
-    <v-btn
-    class="btnqwt"
-      style="
-        margin: 5px;
-        background: transparent;
-        color: white;
-        border: 1px solid white;
-        border-radius: 3px;
-        width: 70px;
-        min-height: 32px;
-        font-size: 13px;
-      "
-      >ABOUT US</v-btn
-    >
+    <v-btn class="reg" outlined>REGISTER</v-btn>
+    <v-btn class="all" outlined>TRADING</v-btn>
+    <v-btn class="all" outlined>ABOUT US</v-btn>
   </div>
 </template>
 <script>
@@ -194,6 +137,8 @@ export default {
     return {
       dialog: false,
       error: null,
+      passE: "",
+      pass: "",
     };
   },
   methods: {
@@ -211,9 +156,27 @@ export default {
 };
 </script>
 <style scoped>
-.dialog{
-  position: absolute !important;
-  top: -500px !important;
-  color: red !important;
+.qw {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+.all {
+  color: #fff;
+  border: 1px solid white;
+  background: transparent;
+  border-radius: 3px;
+  height: 32px !important;
+  margin: 5px;
+}
+.all:hover {
+  background: #59d0ff;
+}
+.reg {
+  background: #fff;
+  border: 1px solid white;
+  color: #093152;
+}
+.reg:hover {
+  background: #59d0ff;
 }
 </style>
