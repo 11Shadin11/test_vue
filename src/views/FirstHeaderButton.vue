@@ -74,7 +74,6 @@
                     font-weight: 700;
                     color: #333;
                     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-                    margin-bottom: 50px;
                   "
                   >Password</label
                 >
@@ -105,7 +104,7 @@
             </v-row>
           </v-container>
         </v-card-text>
-        <v-card-actions style="margin-top: -30px">
+        <v-card-actions>
           <v-btn color="primary" text @click="checkinf"> Login </v-btn>
           <v-btn color="primary" dark text @click="dialog = false">
             Close
@@ -114,14 +113,10 @@
             {{ error }}
           </div>
         </v-card-actions>
-
-        <li class="qw">
-          Don't have an account? <a href="#1"> Sign up now.</a>
-        </li>
-        <li class="qw">
-          Forgot Password or Two-Factor Device?
-          <a href="#1"> Request Password Reset.</a>
-        </li>
+        
+        <span> Don't have an account?</span> <a href="#1"> Sign up now.</a> 
+        <br />
+        <span>Forgot Password or Two-Factor Device? </span> <a href="#1"> Request Password Reset.</a>
       </v-card>
     </v-dialog>
     <v-btn class="reg" outlined>REGISTER</v-btn>
@@ -156,27 +151,41 @@ export default {
 };
 </script>
 <style scoped>
-.qw {
-  margin-bottom: 10px;
-  list-style-type: none;
-}
 .all {
   color: #fff;
   border: 1px solid white;
   background: transparent;
   border-radius: 3px;
+  width: 69px !important;
   height: 32px !important;
   margin: 5px;
+  font-size: 13px;
 }
 .all:hover {
   background: #59d0ff;
+  border-color: #59d0ff;
 }
 .reg {
   background: #fff;
   border: 1px solid white;
   color: #093152;
+  font-size: 13px;
+  width: 69px !important;
+  height: 32px !important;
 }
 .reg:hover {
   background: #59d0ff;
+  border-color: #59d0ff;
+  color: #fff;
 }
+/* .dialog-position{
+  align-self: flex-end;
+  max-width: 598px;
+  max-height: 398px;
+} */
+/* .v-dialog:not(.v-dialog--fullscreen) {
+    bottom: 0 !important;
+    right: 0 !important;
+    position: sticky !important;
+} */
 </style>

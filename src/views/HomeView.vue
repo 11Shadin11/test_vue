@@ -12,7 +12,27 @@
         </div>
         <div class="ico"></div>
       </div>
-      <div class="sectiontwo"></div>
+      <div class="sectionCurrency">
+        <ul>
+          <li>
+            <h2>BITCOIN PRICE</h2>
+            <span>22979.39 USD</span>
+          </li>
+          <li>
+            <h2>BITCOIN PRICE</h2>
+            <span>22568.89 EUR</span>
+          </li>
+          <li>
+            <h2>24H VOLUME</h2>
+            <span>3822 BTC</span>
+          </li>
+          <li>
+            <h2>ACTIVE TRADERS</h2>
+            <span>1,613,024</span>
+          </li>
+        </ul>
+      </div>
+      <div class="sectionDiagram"></div>
     </v-app>
   </div>
 </template>
@@ -33,20 +53,20 @@ export default {
 .bac {
   background: url(https://bittrading.club/img/background-index4.png);
   background-repeat: no-repeat;
-  background-position: top;
-  background-size: 210.2%;
+  /* background-size: 210.2%; */
+  transform: scale(1);
   background-position: 50% 100%;
   max-height: 400px;
   width: 100%;
 }
 .ico {
   background: url(https://bittrading.club/img/sprite-index.svg);
-  background-size: 295%;
-  background-position: 87.1% 107.5%;
+  transform: scale(0.98);
+  background-position: 86.4% 107.5%;
   width: 283px;
   height: 283px;
   float: left;
-  margin: 10px 0 0 -15px;
+  margin: 11px 0 0 -16px;
 }
 .firstContent {
   margin: 0 auto;
@@ -55,13 +75,11 @@ export default {
   overflow: hidden;
 }
 .homeText {
-  position: absolute;
-  color: white;
+  color: #fff;
   text-align: left;
   float: right;
-  left: 50%;
-  top: 50%;
-  transform: translate(-30%, -200%);
+  margin-top: 70px;
+  margin-left: -180px;
 }
 .h1 {
   font-size: 60px;
@@ -69,9 +87,36 @@ export default {
   margin: 0;
   padding: 0;
 }
-.sectiontwo {
+.sectionCurrency {
   width: 100% !important;
   height: 115px !important;
   background: #1e3063;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.sectionCurrency, ul {
+  text-align: center;
+  padding: 0;
+  margin: 30px 0;
+  list-style: none;
+  overflow: hidden;
+  color: #fff;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+}
+.sectionCurrency, ul, li {
+  padding: 0 45px;
+  border-right: 1px solid #00b3bf;
+  letter-spacing: 0;
+  display: inline-block;
+  vertical-align: top;
+  font: 28px "uni_sans_lightregular", Arial, Helvetica, sans-serif;
+}
+.sectionDiagram{
+  width: 100%;
+  height: calc(100% - 200px);
 }
 </style>
