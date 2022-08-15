@@ -4,7 +4,7 @@
       margin: 0 auto;
       width: 1100px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      padding: 18px 26px 10px 34px;
+      padding: 21px 26px 10px 34px;
       text-align: right;
     "
   >
@@ -151,15 +151,22 @@ export default {
 };
 </script>
 <style scoped>
+* {
+  padding: 0;
+  margin: 0;
+}
 .all {
   color: #fff;
   border: 1px solid white;
   background: transparent;
   border-radius: 3px;
-  width: 69px !important;
+  width: auto;
   height: 32px !important;
   margin: 5px;
-  font-size: 13px;
+  font-size: 12px;
+  letter-spacing: 0px;
+  font-weight: 600;
+  font-family: 'uni_sans_semiboldregular',Arial,Helvetica,sans-serif;
 }
 .all:hover {
   background: #59d0ff;
@@ -169,9 +176,12 @@ export default {
   background: #fff;
   border: 1px solid white;
   color: #093152;
-  font-size: 13px;
-  width: 69px !important;
+  font-size: 12px;
+  letter-spacing: 0px;
+  font-weight: 700;
+  width: auto !important;
   height: 32px !important;
+  font-family: 'uni_sans_semiboldregular',Arial,Helvetica,sans-serif;
 }
 .reg:hover {
   background: #59d0ff;

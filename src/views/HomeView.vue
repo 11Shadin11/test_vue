@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <v-app class="bac">
+  <v-app>
+    <div class="bac">
       <v-toolbar-items>
         <FirstHeaderButton></FirstHeaderButton>
       </v-toolbar-items>
@@ -12,29 +12,31 @@
         </div>
         <div class="ico"></div>
       </div>
-      <div class="sectionCurrency">
-        <ul>
-          <li>
-            <h2>BITCOIN PRICE</h2>
-            <span>22979.39 USD</span>
-          </li>
-          <li>
-            <h2>BITCOIN PRICE</h2>
-            <span>22568.89 EUR</span>
-          </li>
-          <li>
-            <h2>24H VOLUME</h2>
-            <span>3822 BTC</span>
-          </li>
-          <li>
-            <h2>ACTIVE TRADERS</h2>
-            <span>1,613,024</span>
-          </li>
-        </ul>
-      </div>
-      <div class="sectionDiagram"></div>
-    </v-app>
-  </div>
+    </div>
+    <div class="sectionCurrency">
+      <ul>
+        <li>
+          <h2 class="currencyHeader">BITCOIN PRICE</h2>
+          <span>22979.39 USD</span>
+        </li>
+        <li>
+          <h2 class="currencyHeader">BITCOIN PRICE</h2>
+          <span>22568.89 EUR</span>
+        </li>
+        <li>
+          <h2 class="currencyHeader">24H VOLUME</h2>
+          <span>3822 BTC</span>
+        </li>
+        <li>
+          <h2 class="currencyHeader">ACTIVE TRADERS</h2>
+          <span>1,613,024</span>
+        </li>
+      </ul>
+    </div>
+    <div class="sectionDiagram">
+      <div ></div>
+    </div>
+  </v-app>
 </template>
 
 <script>
@@ -51,22 +53,24 @@ export default {
   margin: 0;
 }
 .bac {
-  background: url(https://bittrading.club/img/background-index4.png);
+  background: #1c5d7a url(https://bittrading.club/img/background-index4.png);
   background-repeat: no-repeat;
   /* background-size: 210.2%; */
   transform: scale(1);
   background-position: 50% 100%;
-  max-height: 400px;
+  min-height: 400px;
   width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 .ico {
   background: url(https://bittrading.club/img/sprite-index.svg);
-  transform: scale(0.98);
+  transform: scale(0.987);
   background-position: 86.4% 107.5%;
   width: 283px;
   height: 283px;
   float: left;
-  margin: 11px 0 0 -16px;
+  margin: 12px 0 0 -16px;
 }
 .firstContent {
   margin: 0 auto;
@@ -77,29 +81,26 @@ export default {
 .homeText {
   color: #fff;
   text-align: left;
-  float: right;
-  margin-top: 70px;
-  margin-left: -180px;
+  margin: 50px 0 0 -10px;
+  font-family: "uni_sans_semiboldregular", Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-25%,-65%);
 }
 .h1 {
-  font-size: 60px;
-  letter-spacing: 2px;
-  margin: 0;
-  padding: 0;
+  font: 62px "uni_sans_semiboldregular", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  margin: 0 auto;
 }
 .sectionCurrency {
   width: 100% !important;
   height: 115px !important;
   background: #1e3063;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
 }
-.sectionCurrency, ul {
+ul {
   text-align: center;
   padding: 0;
-  margin: 30px 0;
   list-style: none;
   overflow: hidden;
   color: #fff;
@@ -107,7 +108,7 @@ export default {
   line-height: 0;
   letter-spacing: -4px;
 }
-.sectionCurrency, ul, li {
+li {
   padding: 0 45px;
   border-right: 1px solid #00b3bf;
   letter-spacing: 0;
@@ -115,8 +116,18 @@ export default {
   vertical-align: top;
   font: 28px "uni_sans_lightregular", Arial, Helvetica, sans-serif;
 }
-.sectionDiagram{
+li:last-child {
+  border: none;
+} 
+.currencyHeader{
+  color: #00b3bf;
+  font: 15px/16px 'uni_sans_semiboldregular',Arial,Helvetica,sans-serif;
+  margin: 0 0 6px;
+}
+.sectionDiagram {
+  background: url(C:/Users/user1/Downloads/sec2.png);
+  background-repeat: no-repeat;
   width: 100%;
-  height: calc(100% - 200px);
+  height: 730px;
 }
 </style>
