@@ -14,27 +14,42 @@
       </div>
     </div>
     <div class="sectionCurrency">
-      <ul>
-        <li>
-          <h2 class="currencyHeader">BITCOIN PRICE</h2>
-          <span>22979.39 USD</span>
-        </li>
-        <li>
-          <h2 class="currencyHeader">BITCOIN PRICE</h2>
-          <span>22568.89 EUR</span>
-        </li>
-        <li>
-          <h2 class="currencyHeader">24H VOLUME</h2>
-          <span>3822 BTC</span>
-        </li>
-        <li>
-          <h2 class="currencyHeader">ACTIVE TRADERS</h2>
-          <span>1,613,024</span>
-        </li>
-      </ul>
+      <div class="containerli">
+        <ul>
+          <li>
+            <h2 class="currencyHeader">BITCOIN PRICE</h2>
+            <span>{{BITCOINUSD}} USD</span>
+          </li>
+          <li>
+            <h2 class="currencyHeader">BITCOIN PRICE</h2>
+            <span>{{BITCOINEUR}} EUR</span>
+          </li>
+          <li>
+            <h2 class="currencyHeader">24H VOLUME</h2>
+            <span>{{VOLUME}} BTC</span>
+          </li>
+          <li>
+            <h2 class="currencyHeader">ACTIVE TRADERS</h2>
+            <span>{{ACTIVETRADERS}}</span>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="sectionDiagram">
-      <div ></div>
+    <div class="platform-features">
+      <div class="container">
+        <div class="row">
+          <div class="tradingview-widget-container">
+            <div id="tradingview_7288d">
+              <div id="tradingview_38905-wrapper">
+                <div class="qwe">
+                  <iframe id="tradingview_38905" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_38905&amp;symbol=COINBASE%3ABTCUSD&amp;interval=D&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=f1f3f6&amp;studies=%5B%5D&amp;theme=dark&amp;style=0&amp;timezone=Etc%2FUTC&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en&amp;utm_source=bittrading.club&amp;utm_medium=widget&amp;utm_campaign=chart&amp;utm_term=COINBASE%3ABTCUSD" style="width: 100%; height: 100%; margin: 0 !important; padding: 0 !important;" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen="">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </v-app>
 </template>
@@ -43,8 +58,37 @@
 import FirstHeaderButton from "../views/FirstHeaderButton.vue";
 export default {
   name: "Menu",
-
+  // props:{
+  //   valueSize(){return 24092.45 + Math.ceil(Math.random()*10)}
+  // },
+ 
+  props:{
+    BITCOINUSD: {
+      type: Number,
+      default:24092.45
+    },
+    BITCOINEUR:{
+      type: Number,
+      default:22568.89
+    },
+    VOLUME:{
+      type: Number,
+      default:3822
+    },
+    ACTIVETRADERS:{
+      type:Number,
+      default:1613024
+    }
+  },
   components: { FirstHeaderButton },
+  
+  mounted(){
+    setInterval(()=>this.BITCOINUSD = 24092.45 + Math.ceil(Math.random()*10),6000000)
+    setInterval(()=>this.BITCOINEUR = 22568.89 + Math.ceil(Math.random()*10),6000000)
+    setInterval(()=>this.VOLUME = 3822 + Math.ceil(Math.random()*10),6000000)
+    setInterval(()=>this.ACTIVETRADERS = 1613024 + Math.ceil(Math.random()*10),6000000)
+
+  },
 };
 </script>
 <style scoped>
@@ -104,8 +148,6 @@ ul {
   list-style: none;
   overflow: hidden;
   color: #fff;
-  font-size: 0;
-  line-height: 0;
   letter-spacing: -4px;
 }
 li {
@@ -113,21 +155,33 @@ li {
   border-right: 1px solid #00b3bf;
   letter-spacing: 0;
   display: inline-block;
-  vertical-align: top;
   font: 28px "uni_sans_lightregular", Arial, Helvetica, sans-serif;
 }
 li:last-child {
   border: none;
 } 
 .currencyHeader{
-  color: #00b3bf;
+  color: #59d0ff;
   font: 15px/16px 'uni_sans_semiboldregular',Arial,Helvetica,sans-serif;
   margin: 0 0 6px;
 }
-.sectionDiagram {
-  background: url(C:/Users/user1/Downloads/sec2.png);
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 730px;
+.platform-features {
+  color: #fff;
+  text-align: center;
+  padding: 60px 0;
+}
+.container{
+  width: 970px;
+}
+.containerli{
+  padding-top:30px;
+}
+.platform-features{
+  background:#19264a;
+}
+.qwe{
+  width: 1024px;
+  height: 610px;
+  margin-left: 440px;
 }
 </style>
