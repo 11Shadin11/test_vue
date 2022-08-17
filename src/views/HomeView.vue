@@ -35,21 +35,21 @@
         </ul>
       </div>
     </div>
-    <div class="platform-features">
-      <div class="container">
-        <div class="row">
-          <div class="tradingview-widget-container">
-            <div id="tradingview_7288d">
-              <div id="tradingview_38905-wrapper">
-                <div class="qwe">
-                  <iframe id="tradingview_38905" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_38905&amp;symbol=COINBASE%3ABTCUSD&amp;interval=D&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=f1f3f6&amp;studies=%5B%5D&amp;theme=dark&amp;style=0&amp;timezone=Etc%2FUTC&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en&amp;utm_source=bittrading.club&amp;utm_medium=widget&amp;utm_campaign=chart&amp;utm_term=COINBASE%3ABTCUSD" style="width: 100%; height: 100%; margin: 0 !important; padding: 0 !important;" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen="">
-                  </iframe>
+      <div class="platform-features" style="margin-left:0">
+        <div class="container">
+          <div class="row">
+            <div class="tradingview-widget-container">
+              <div id="tradingview_7288d">
+                <div id="tradingview_38905-wrapper">
+                  <div class="qwe">
+                    <iframe id="tradingview_38905" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_38905&amp;symbol=COINBASE%3ABTCUSD&amp;interval=D&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=f1f3f6&amp;studies=%5B%5D&amp;theme=dark&amp;style=0&amp;timezone=Etc%2FUTC&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en&amp;utm_source=bittrading.club&amp;utm_medium=widget&amp;utm_campaign=chart&amp;utm_term=COINBASE%3ABTCUSD" style="width: 100%; height: 100%; margin: 0 !important; padding: 0 !important;" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen="">
+                    </iframe>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
   </v-app>
 </template>
@@ -83,8 +83,8 @@ export default {
   components: { FirstHeaderButton },
   
   mounted(){
-    setInterval(()=>this.BITCOINUSD = 24092.45 + Math.ceil(Math.random()*10),6000000)
-    setInterval(()=>this.BITCOINEUR = 22568.89 + Math.ceil(Math.random()*10),6000000)
+    setInterval(()=>this.BITCOINUSD = 24092.45 + Math.ceil(Math.random()*10),6000)
+    setInterval(()=>this.BITCOINEUR = 22568.89 + Math.ceil(Math.random()*10),6000)
     setInterval(()=>this.VOLUME = 3822 + Math.ceil(Math.random()*10),6000000)
     setInterval(()=>this.ACTIVETRADERS = 1613024 + Math.ceil(Math.random()*10),6000000)
 
@@ -166,18 +166,19 @@ li:last-child {
   margin: 0 0 6px;
 }
 .platform-features {
+  background:#19264a;
   color: #fff;
   text-align: center;
   padding: 60px 0;
 }
 .container{
-  width: 970px;
+  /* padding-right: 2px;
+  padding-left: 15px; */
+  margin-right: auto;
+  margin-left: auto;
 }
 .containerli{
   padding-top:30px;
-}
-.platform-features{
-  background:#19264a;
 }
 .qwe{
   width: 1024px;
