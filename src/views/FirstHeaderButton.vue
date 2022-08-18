@@ -26,8 +26,8 @@
             </v-row>
           </v-container>
         </v-card-text>
-        <v-card-actions style="padding-left:25px; padding-top:15px">
-          <v-btn color="primary" style="background:#2e6da4"  @click="checkinf" > Login </v-btn>
+        <v-card-actions style="padding:15px 0 15px 25px">
+          <v-btn color="primary" style="background:#337ab7 !important; width:60px !important; height:34px !important; font-size:14px; font-weight:400"  @click="checkinf" > Login </v-btn>
           <v-btn depressed @click="dialog = false">Close</v-btn>
           <div style="color: red">
             {{ error }}
