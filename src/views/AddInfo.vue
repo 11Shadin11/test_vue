@@ -187,34 +187,25 @@ export default {
 .index-icon.security {
   background-position: 12.7% 60%;
 }
-.index-icon {
-  float: left;
-  min-width: 10px;
-  width: 55px;
-  height: 55px;
-  background: url(https://bittrading.club/img/sprite-index.svg) no-repeat;
-  background-size: 926%;
-}
 .index-icon.coverage {
   background-position: 48.3% 60%;
-}
-.index-icon {
-  float: left;
-  min-width: 10px;
-  width: 55px;
-  height: 55px;
-  background: url(https://bittrading.club/img/sprite-index.svg) no-repeat;
-  background-size: 926%;
 }
 .index-icon.legal {
   background-position: 101% 60%;
 }
-.index-icon {
-  float: left;
-  min-width: 10px;
-  width: 55px;
-  height: 55px;
-  background: url(https://bittrading.club/img/sprite-index.svg) no-repeat;
-  background-size: 926%;
+.index-icon.margin {
+  background-position: 73.7% 60%;
+}
+.index-icon.comissions {
+  background-position: 88% 60%;
+}
+.index-icon.cross-platform {
+  background-position: 60.8% 60%;
+}
+.index-icon.reporting {
+    background-position: -.2% 60%;
+}
+.index-icon.liquidity {
+    background-position: 36.7% 60%;
 }
 </style>
