@@ -1,20 +1,12 @@
 <template lang="pug">
-<div class="title">
-  <div>
-    <Menu></Menu>
-  </div>
-</div>
+div
+  div(id="app")
+    Menu
+    router-view
 </template>
 
 <script>
-import Menu from './views/HomeView.vue'
-import Cont from './views/Home.vue'
-import About from './views/About.vue'
 export default {
   name: "App",
-  components: {Menu, Cont,About},
 };
 </script>
-
-<style scoped>
-</style>

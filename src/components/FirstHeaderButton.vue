@@ -40,7 +40,7 @@
       </v-card>
     </v-dialog>
     <v-btn class="reg" outlined style="max-width:83.61px">REGISTER</v-btn>
-    <v-btn class="all" outlined style="max-width:78.3px">TRADING</v-btn>
+    <v-btn class="all" outlined style="max-width:78.3px" @click="asd">TRADING</v-btn>
     <v-btn class="all" outlined style="max-width:85.86px" >ABOUT US</v-btn>
   </div>
 </template>
@@ -67,6 +67,9 @@ export default {
         return true;
       }
     },
+    asd(){
+      this.$router.push({path:'/test'})
+    }
   },
 };
 </script>

@@ -59,19 +59,19 @@
     <section>
       <AddInfo></AddInfo>
     </section>
+    <section>
+      <Footer></Footer>
+    </section>
   </v-app>
 </template>
 
 <script>
-import FirstHeaderButton from "../views/FirstHeaderButton.vue";
-import InfoBtn from "../views/AddInfoBtn.vue";
-import AddInfo from "../views/AddInfo.vue";
+import FirstHeaderButton from "../components/FirstHeaderButton.vue";
+import InfoBtn from "../components/AddInfoBtn.vue";
+import AddInfo from "../components/AddInfo.vue";
+import Footer from "../components/Footer.vue"
 export default {
   name: "Menu",
-  // props:{
-  //   valueSize(){return 24092.45 + Math.ceil(Math.random()*10)}
-  // },
- 
   props:{
     BITCOINUSD: {
       type: Number,
@@ -90,7 +90,7 @@ export default {
       default:"1,613,024"
     }
   },
-  components: { FirstHeaderButton, InfoBtn, AddInfo },
+  components: { FirstHeaderButton, InfoBtn, AddInfo, Footer },
   
   mounted(){
     setInterval(()=>this.BITCOINUSD = 24092.45 + Math.ceil(Math.random()*10),6000000)
